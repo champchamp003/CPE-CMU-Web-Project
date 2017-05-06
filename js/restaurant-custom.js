@@ -16,6 +16,14 @@ $.backstretch([
     duration: 4000
 });
 
+$.backstretch_professor([
+    "img/resto/img-1.jpg",
+    "img/resto/img-2.jpg",
+    "img/resto/img-3.jpg"
+], {
+    fade: 750,
+    duration: 4000
+});
 
 //menu shrink
 $(document).on("scroll", function () {
