@@ -17,7 +17,7 @@ $.backstretch([
 });
 
 $.backstretch_professor([
-    "img/resto/img-1.jpg",
+    "professor/teacher/อจก.png",
     "img/resto/img-2.jpg",
     "img/resto/img-3.jpg"
 ], {
