@@ -42,7 +42,7 @@
             VALUES ('".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["position"]."','".$_POST["university"]."','".$_POST["specialist"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
-		header('Location:professor_form.php');
+		header('Location:professor_form_2.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
