@@ -1,6 +1,6 @@
 <?php
 	/**********************image upload***********************/
-	$target_dir = "teacher/";
+	$target_dir = "officer/";
 	$target_file = $target_dir.basename($_FILES["img"]["name"]);
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	
@@ -38,11 +38,11 @@
 	} 
 	
 
-	$sql = "INSERT INTO professor (firstname,lastname,position,university,specialist,img)
-            VALUES ('".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["position"]."','".$_POST["university"]."','".$_POST["specialist"]."','".$target_file."')";
+	$sql = "INSERT INTO officer (firstname,lastname,position,img)
+            VALUES ('".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["position"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
-		header('Location:professor_form.php');
+		header('Location:officer_form.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

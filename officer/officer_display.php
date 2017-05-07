@@ -13,7 +13,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
 	
-  $sql = "SELECT * FROM professor where id='".$_GET["id"]."'";
+  $sql = "SELECT * FROM officer where id='".$_GET["id"]."'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc()
 	
@@ -33,10 +33,6 @@
                           <h3><?=$row["firstname"]?> <?=$row["lastname"]?></h3>
                           <div class="teachersProfession bg-color-3">ตำแหน่ง</div>
                           <div class="professionDetails"><?=$row["position"]?></div>
-                          <div class="teachersProfession bg-color-4">มหาวิทยาลัย</div>
-                          <div class="professionDetails"><?=$row["university"]?></div>
-                          <div class="teachersProfession bg-color-6">รายละเอียด</div>
-                          <div class="professionDetails"><?=$row["specialist"]?></div>
                     </div>
                   </div>
             </div>
