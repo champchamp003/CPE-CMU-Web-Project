@@ -42,7 +42,7 @@
                 die("Connection failed: " . $conn->connect_error);
             } 
 
-            $sql = "SELECT * FROM freshmen";
+            $sql = "SELECT * FROM freshman";
             $result = $conn->query($sql);
             ?>
             
