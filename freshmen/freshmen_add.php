@@ -38,7 +38,7 @@
 	} 
 	
 
-	$sql = "INSERT INTO freshmen (student_id,firstname,lastname,nickname,gender,age,school,entrance,img)
+	$sql = "INSERT INTO freshman (student_id,firstname,lastname,nickname,gender,age,school,entrance,img)
             VALUES ('".$_POST["student_id"]."','".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["nickname"]."','".$_POST["gender"]."','".$_POST["age"]."','".$_POST["school"]."','".$_POST["entrance"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {

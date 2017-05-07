@@ -64,7 +64,7 @@
                     <div class="col-xs-offset-1 col-xs-10">
                         <div class="panel panel-default formPanel">
                           <div class="panel-heading bg-color-1 border-color-1">
-                            <h3 class="panel-title">Create  an account</h3>
+                            <h3 class="panel-title">คณาจารย์</h3>
                         </div>
                         <div class="panel-body">
                             <form action="professor_add.php" method="POST" role="form" enctype="multipart/form-data">
@@ -148,7 +148,7 @@
             $result = $conn->query($sql);
             ?>
             <div class="col-xs-12">
-                <h3 class="color-1">จำนวนอาจารย์ <?=$result->num_rows?> คน</h3>
+                <h3 class="color-1">จำนวนคณาจารย์รวมทั้งสิ้น<?=$result->num_rows?> คน</h3>
                 <div class="table-responsive">
                   <table class="table table-curved">
                     <thead>
