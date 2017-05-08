@@ -13,7 +13,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
 	
-  $sql = "SELECT * FROM freshmen where id='".$_GET["id"]."'";
+  $sql = "SELECT * FROM freshman where id='".$_GET["id"]."'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc()
 	
