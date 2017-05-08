@@ -111,31 +111,6 @@
         <script src="../js/jqBootstrapValidation.js" type="text/javascript"></script>
         <!--restaurant custom js-->
         <script src="../js/restaurant-custom.js" type="text/javascript"></script>
-
-        <!-- jQuery -->
-        <script src="../js/jquery.min.js"></script>
-        <!-- Bootstrap js-->
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <!--easing plugin for smooth scroll-->
-        <script src="../js/jquery.easing.1.3.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.backstretch.min.js" type="text/javascript"></script>
-        <!--flex slider plugin-->
-        <script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
-        <!--owl carousel slider js-->
-        <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
-        <!-- jQuery UI -->
-        <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
-        <!--pace plugin-->
-        <script src="../js/pace.min.js" type="text/javascript"></script>
-        <!--on scroll animation-->
-        <script src="../js/wow.min.js" type="text/javascript"></script> 
-        <!--popup js-->
-        <script src="../lightbox2/dist/js/lightbox.min.js" type="text/javascript"></script>
-        <!--cantact form script-->
-        <script src="../js/contact_me.js" type="text/javascript"></script>
-        <script src="../js/jqBootstrapValidation.js" type="text/javascript"></script>
-        <!--restaurant custom js-->
-        <script src="../js/restaurant-custom.js" type="text/javascript"></script>
         
     </body>
 </html
