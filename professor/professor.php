@@ -79,7 +79,7 @@
                  <?php while($row = $result->fetch_assoc()): ?>
                     <div class="col-md-3 col-sm-6 text-center">
                         <div class="img-service-box">
-                            <a href="professor_display.php?id=<?=$row["id"]?>"><img src="<?=$row["img"]?>" width="200" height="200" class="img-circle " alt="">
+                            <a href="professor_display.php?id=<?=$row["id"]?>"><img src="<?=$row["img"]?>" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><?=$row["firstname"]?></h3>
                             <h3><?=$row["lastname"]?></h3>

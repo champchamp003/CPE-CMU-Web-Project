@@ -93,17 +93,7 @@
                                                <input type="text" class="form-control" name="nickname" placeholder="ชื่อเล่น" required>
                                         </div>
 
-                                        <div class="form-group formField">
-                                        <div class="col-xs-12">
-                                              <label for="">เพศ</label>
-                                               <input type="text" class="form-control" name="gender" placeholder="เพศ" required>
                                         </div>
-                                        <div class="form-group formField">
-                                        <div class="col-xs-12">
-                                           <label for="">อายุ</label>
-                                           <input type="text" class="form-control" name="age" placeholder="อายุ" required>
-                                        </div>
-                                      </div>
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">จบจากโรงเรียน</label>

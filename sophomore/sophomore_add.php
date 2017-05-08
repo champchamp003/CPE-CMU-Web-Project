@@ -38,8 +38,8 @@
 	} 
 	
 
-	$sql = "INSERT INTO Sophomore (student_id,firstname,lastname,nickname,gender,age,school,entrance,img)
-            VALUES ('".$_POST["student_id"]."','".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["nickname"]."','".$_POST["gender"]."','".$_POST["age"]."','".$_POST["school"]."','".$_POST["entrance"]."','".$target_file."')";
+	$sql = "INSERT INTO Sophomore (student_id,firstname,lastname,nickname,school,entrance,img)
+            VALUES ('".$_POST["student_id"]."','".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["nickname"]."','".$_POST["school"]."','".$_POST["entrance"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
 		header('Location:Sophomore_form.php');
