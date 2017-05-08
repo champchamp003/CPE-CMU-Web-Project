@@ -1,3 +1,23 @@
+<?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "phpbasic";
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    mysqli_set_charset($conn, "utf8");
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    
+  $sql = "SELECT * FROM professor where id='".$_GET["id"]."'";
+  $result = $conn->query($sql);
+  $row = $result->fetch_assoc()
+    
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,18 +65,18 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="#add">Add</a></li>
+                        <li><a href="#edit">Edit</a></li>
                         <li><a href="#list">List</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
 
-        <section id="add" class="about-section" >
+        <section id="edit" class="about-section" >
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 center-title text-center">
-                        <h3><br>Add</h3>
+                        <h3><br>Edit</h3>
                         <span class="center-line"></span>
                     </div>
                 </div><!--section title-->
@@ -67,43 +87,44 @@
                             <h3 class="panel-title">คณาจารย์</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="professor_add.php" method="POST" role="form" enctype="multipart/form-data">
+                            <form action="professor_edit.php?id=<?=$row["id"]?>" method="POST" role="form" enctype="multipart/form-data">
                               <div class="form-group formField">
                                 <div class="col-xs-12">
                                    <label for="">ชื่อ</label>
-                                   <input type="text" class="form-control" name="firstname" placeholder="ชื่อ" required>
+                                   <input type="text" class="form-control" name="firstname" value="<?=$row["firstname"]?>" >
                                </div>
                            </div>
                            <div class="form-group formField">
                               <div class="col-xs-12">
                                 <label for="">นามสกุล</label>
-                                <input type="text" class="form-control" name="lastname" placeholder="นามสกุล" required>
+                                <input type="text" class="form-control" name="lastname" value="<?=$row["lastname"]?>" >
                             </div>
                         </div>
 
                         <div class="form-group formField">
                           <div class="col-xs-12">
                             <label for="">ตำแหน่ง</label>
-                            <input type="text" class="form-control" name="position" placeholder="ตำแหน่ง" required>
+                            <input type="text" class="form-control" name="position" value="<?=$row["position"]?>" >
                         </div>
 
                         <div class="form-group formField">
                             <div class="col-xs-12">
                               <label for="">จบจากมหาวิทยาลัยอะไร ?</label>
-                              <input type="text" class="form-control" name="university" placeholder="มหาวิทยาลัย" required>
+                              <input type="text" class="form-control" name="university" value="<?=$row["university"]?>" >
                           </div>
 
                           <div class="form-group">
                               <div class="col-xs-12">
                                 <label for="">ความสนใจพิเศษ</label>
-                                <textarea class="form-control" name="specialist" rows="10"></textarea>
+                                <textarea class="form-control" name="specialist"  rows="10"><?=$row["specialist"]?></textarea>
                             </div>
 
                         </div>
                         <div class="form-group">
                           <div class="col-xs-12">
                             <label for="">รูปภาพ</label>
-                            <input type="file" name="img" id="img" required>
+                            <p><img src="<?=$row["img"]?>" alt="" img-rounded img-responsive width=125></p>
+                            <input type="file" name="img" id="img">
                         </div>
 
                     </div>
@@ -117,67 +138,6 @@
          </div>
      </div>
  </div>
-</div>
-</div>  
-</section><!--about us-->
-
-<section id="list" class="testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 center-title text-center">
-                <h3>List</h3>
-                <span class="center-line"></span>
-            </div>
-        </div><!--section title-->
-        <div class="row">
-            <?php
-
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "phpbasic";
-            $conn = new mysqli($servername, $username, $password,$dbname);
-            mysqli_set_charset($conn, "utf8");
-
-    // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            } 
-
-            $sql = "SELECT * FROM professor";
-            $result = $conn->query($sql);
-            ?>
-            <div class="col-xs-12">
-                <h3 class="color-1">จำนวนคณาจารย์รวมทั้งสิ้น<?=$result->num_rows?> คน</h3>
-                <div class="table-responsive">
-                  <table class="table table-curved">
-                    <thead>
-                      <tr>
-                        <th class="col-sm-2"><h4>ID</h4></th>
-                        <th class="col-sm-2"><h4>ชื่อ</h4></th>
-                        <th class="col-sm-2"><h4>นามสกุล</h4></th>
-                        <th class="col-sm-2"><h4>ตำแหน่ง</h4></th>
-                        <th class="col-sm-2"><h4>รูปภาพ</h4></th>
-                        <th class="col-sm-2"><h4>แก้ไข</h4></th>
-                        <th class="col-sm-2"><h4>ลบ</h4></th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <?php while($row = $result->fetch_assoc()): ?>
-                    <tr>
-                        <td><?=$row["id"]?></td>
-                        <td><?=$row["firstname"]?></td>
-                        <td><?=$row["lastname"]?></td>
-                        <td><?=$row["position"]?></td>
-                        <td><img src="<?=$row["img"]?>" width="48" >
-                        <td><a href="professor_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></a></td>
-                        <td><a href="professor_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></a></td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
-    </div>
-</div><?php $conn->close(); ?><!--img-service box-->
 </div>
 </div>  
 </section><!--about us-->
