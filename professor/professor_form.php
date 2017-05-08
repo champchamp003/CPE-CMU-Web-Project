@@ -170,8 +170,8 @@
                         <td><?=$row["lastname"]?></td>
                         <td><?=$row["position"]?></td>
                         <td><img src="<?=$row["img"]?>" width="48" >
-                        <td><a href=""><i class="fa fa-pencil-square-o"></td>
-                        <td><a href=""><i class="fa fa-times"></td>
+                        <td><a href=""><i class="fa fa-pencil-square-o"></a></td>
+                        <td><a href="professor_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></a></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
