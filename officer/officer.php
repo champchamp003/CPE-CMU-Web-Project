@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Professor</title>
+        <title>Officer</title>
         <!-- Bootstrap -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -28,6 +28,26 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="../index.html"><img src="../img/logo.png" alt = "img" width = "140"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav scroll-to navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#officer">Oficcer</a></li>                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
             <?php
 
             $servername = "localhost";
@@ -46,11 +66,11 @@
             $result = $conn->query($sql);
             ?>
             
-        <section id="people" class="about-section">
+        <section id="officer" class="about-section">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 center-title text-center">
-                        <h3>Professor</h3>
+                        <h3><br>Officer</h3>
                         <span class="center-line"></span>
                     </div>
                 </div><!--section title-->
@@ -73,7 +93,7 @@
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <!--easing plugin for smooth scroll-->
         <script src="../js/jquery.easing.1.3.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.backstretch1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.backstretch.min.js" type="text/javascript"></script>
         <!--flex slider plugin-->
         <script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
         <!--owl carousel slider js-->
@@ -91,71 +111,6 @@
         <script src="../js/jqBootstrapValidation.js" type="text/javascript"></script>
         <!--restaurant custom js-->
         <script src="../js/restaurant-custom.js" type="text/javascript"></script>
-
-        <!-- jQuery-->
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/jquery-migrate.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/jquery.easing.1.3.min.js" type="text/javascript"></script>
-        <script src="../js/wow.min.js" type="text/javascript"></script> 
-        <script src="../js/jquery.sticky.js" type="text/javascript"></script>
-        <script src="../js/waypoints.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.counterup.min.js" type="text/javascript"></script>
-        <script src="../js/modernizr.custom.97074.js" type="text/javascript"></script>
-        <script src="../js/parallax.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
-        <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
-        <script src="../js/one-page.js" type="text/javascript"></script> 
-        <!--cube portfolio plugin-->
-        <script src="../cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
-        <script src="../js/cube-portfolio.js" type="text/javascript"></script>
-        <!--cantact form script-->
-        <script src="../js/contact_me.js" type="text/javascript"></script>
-        <script src="../js/jqBootstrapValidation.js" type="text/javascript"></script>
-        <script type="text/javascript" src="../js/jasny-bootstrap.min.js"></script>
-        <script type="text/javascript" src="../js/pace.min.js"></script>
-        <!--revolution slider plugins-->
-        <script src="rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
-        <script src="rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="../js/revolution-custom.js"></script>
-        <!--gmap js-->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript">
-            var myLatlng;
-            var map;
-            var marker;
-
-            function initialize() {
-                myLatlng = new google.maps.LatLng(18.7954465,98.9526088);
-
-                var mapOptions = {
-                    zoom: 17,
-                    center: myLatlng,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    scrollwheel: true,
-                    draggable: true
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-                var contentString = '<p style="line-height: 20px;"><strong>คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่</strong></p><p>239 ถนนห้วยแก้ว ตำบลสุเทพ อำเภอเมือง จังหวัดเชียงใหม่ 50200</p>';
-
-                var infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: 'Marker'
-                });
-
-                google.maps.event.addListener(marker, 'click', function () {
-                    infowindow.open(map, marker);
-                });
-            }
-
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
     </body>
 </html
 

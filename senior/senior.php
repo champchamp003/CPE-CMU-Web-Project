@@ -28,6 +28,25 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#"><img src="../img/logo.png" alt = "img" width = "140"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav scroll-to navbar-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#senior">Senoirs</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
             <?php
 
             $servername = "localhost";
@@ -46,11 +65,11 @@
             $result = $conn->query($sql);
             ?>
             
-        <section id="people" class="about-section">
+        <section id="senior" class="about-section">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 center-title text-center">
-                        <h3>Professor</h3>
+                        <h3><br>Seniors</h3>
                         <span class="center-line"></span>
                     </div>
                 </div><!--section title-->
