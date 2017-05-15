@@ -177,8 +177,8 @@
                         <td><?=$row["lastname"]?></td>
                         <td><?=$row["nickname"]?></td>
                         <td><img src="<?=$row["img"]?>" width="48" >
-                        <td><a href=""><i class="fa fa-pencil-square-o"></td>
-                        <td><a href=""><i class="fa fa-times"></td>
+                        <td><a href="sophomore_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></td>
+                        <td><a href="sophomore_delete.php"><i class="fa fa-times"></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>

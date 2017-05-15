@@ -865,7 +865,7 @@ By ADAMSCHWARTZ
   }
 
   .fullscreen-block {
-    background-image: url(b.jpg);
+  background-image: url(b.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   width: 100vw;
