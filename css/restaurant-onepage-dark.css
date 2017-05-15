@@ -19,8 +19,6 @@ body {
   -ms-text-size-adjust: 100%;
   background-color: #222; }
 
-
-
 a {
   color: #f2b84b; }
   a i {
@@ -851,30 +849,25 @@ By ADAMSCHWARTZ
     margin: auto;
 }
 
-.stick-bottom {
-    bottom: 0;
-}
-.stick-left {
-    left: 0;
-}
-@media only all and (min-width: 768px)
-
-.black-ribbon {
-    width: auto;
+.profile-picture {
+    border: 10px 
+    solid #BEBEBE; 
+    margin-bottom: 30px;
+    width: 270px;
+    height: 270px;
+    margin-top: 30px;
 }
 
-.black-ribbon {
-    position: fixed;
-    z-index: 9999;
-    width: auto;
-}
-* {
-    padding: 0;
-    margin: 0;
-}
+.profile-picture img {  
+    width: 250px;  
+    display: block; 
+    height: 250px;
+  }
 
-
-* {
-    word-wrap: break-word;
+  .fullscreen-block {
+    background-image: url(b.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
-

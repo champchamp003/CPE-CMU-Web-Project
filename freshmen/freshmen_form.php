@@ -92,9 +92,6 @@
                                               <label for="">ชื่อเล่น</label>
                                                <input type="text" class="form-control" name="nickname" placeholder="ชื่อเล่น" required>
                                         </div>
-                                        </div>
-
-                                        
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">จบจากโรงเรียน</label>
@@ -103,18 +100,19 @@
                                       </div>
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
-                                           <label for="">การเข้าศึษา</label>
-                                           <input type="text" class="form-control" name="entrance" placeholder="การเข้าศึษา" required>
+                                           <label for="">การเข้าศึษา</label> <br>
+                                           <label><input type="radio" name="entrance" value="รับตรง">รับตรง&nbsp;&nbsp;</label>
+                                            <label><input type="radio" name="entrance" value="แอดมิชชั่น">แอดมิชชั่น&nbsp;&nbsp;</label>
+                                            <label><input type="radio" name="entrance" value="โควตา">โควตา&nbsp;&nbsp;</label>
+                                            <label><input type="radio" name="entrance" value="ไม่ระบุ">-ไม่ระบุ-&nbsp;&nbsp;</label>
                                         </div>
                                       </div>
-
-                                        <div class="form-group">
+                                      <div class="form-group">
                                         <div class="col-xs-12">
                                               <label for="">รูปภาพ</label>
                                               <input type="file" name="img" id="img" required>
                                             </div>
-
-                                        </div>
+                                      </div>
                                       <div class="form-group formField">
                                             <div class="col-xs-12">
                                               <label></label>
@@ -179,8 +177,8 @@
                         <td><?=$row["lastname"]?></td>
                         <td><?=$row["nickname"]?></td>
                         <td><img src="<?=$row["img"]?>" width="48" >
-                        <td><a href="freshmen_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></td>
-                        <td><a href="freshmen_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></td>
+                        <td><a href=""><i class="fa fa-pencil-square-o"></td>
+                        <td><a href=""><i class="fa fa-times"></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
