@@ -73,6 +73,7 @@
         </nav>
 
         <section id="edit" class="about-section" >
+
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 center-title text-center">
@@ -120,20 +121,30 @@
                             </div>
 
                         </div>
-                        <div class="form-group">
-                          <div class="col-xs-12">
-                            <label for="">รูปภาพ</label>
-                            <p><img src="<?=$row["img"]?>" alt="" img-rounded img-responsive width=125></p>
-                            <input type="file" name="img" id="img">
-                        </div>
 
+            
                     </div>
                     <div class="form-group formField">
                       <div class="col-xs-12">
                          <label></label>
-                         <input type="submit" class="btn btn-primary btn-block bg-color-1 border-color-3" value="Submit">
+                         <input type="submit" class="btn btn-primary btn-block bg-color-1 border-color-3" value="แก้ไขข้อมูล">
                      </div>
                  </div>
+             </form>
+             <form action="professor_img_edit.php?id=<?=$row["id"]?>" method="POST" role="form" enctype="multipart/form-data">
+                 <div class="form-group">
+                          <div class="col-xs-12">
+                            <label for=""><br>รูปภาพ</label>
+                            <p><img src="<?=$row["img"]?>" alt="" img-rounded img-responsive width=125></p>
+                            <input type="file" name="img" id="img">
+                        </div>
+
+                        <div class="form-group formField">
+                      <div class="col-xs-12">
+                         <label></label>
+                         <input type="submit" class="btn btn-primary btn-block bg-color-1 border-color-3" value="แก้ไขรูปภาพ">
+                     </div>
+
              </form>
          </div>
      </div>
