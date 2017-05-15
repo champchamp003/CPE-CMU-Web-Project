@@ -19,8 +19,6 @@ body {
   -ms-text-size-adjust: 100%;
   background-color: #222; }
 
-
-
 a {
   color: #f2b84b; }
   a i {
@@ -193,7 +191,7 @@ h1, h1, h3, h4, h5, h6 {
 .about-section {
   padding-top: 80px;
   padding-bottom: 50px;
-  background-image: url(Back.png);
+  background-color: #333;
    }
 
 .img-service-box {
@@ -850,31 +848,3 @@ By ADAMSCHWARTZ
     top: 0; bottom:0;
     margin: auto;
 }
-
-.stick-bottom {
-    bottom: 0;
-}
-.stick-left {
-    left: 0;
-}
-@media only all and (min-width: 768px)
-
-.black-ribbon {
-    width: auto;
-}
-
-.black-ribbon {
-    position: fixed;
-    z-index: 9999;
-    width: auto;
-}
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
-* {
-    word-wrap: break-word;
-}
-

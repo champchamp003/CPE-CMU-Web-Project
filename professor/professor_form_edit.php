@@ -87,36 +87,36 @@
                             <h3 class="panel-title">คณาจารย์</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="professor_edit.php?id=<?=$row["id"]?>" method="POST" role="form" enctype="multipart/form-data">
+                            <form action="professor_edit.php?id=<?=$row["id"]?>?img=<?=$row["img"]?>" method="POST" role="form" enctype="multipart/form-data">
                               <div class="form-group formField">
                                 <div class="col-xs-12">
                                    <label for="">ชื่อ</label>
-                                   <input type="text" class="form-control" name="firstname" value="<?=$row["firstname"]?>" >
+                                   <input type="text" class="form-control" name="firstname" value="<?=$row["firstname"]?>" required>
                                </div>
                            </div>
                            <div class="form-group formField">
                               <div class="col-xs-12">
                                 <label for="">นามสกุล</label>
-                                <input type="text" class="form-control" name="lastname" value="<?=$row["lastname"]?>" >
+                                <input type="text" class="form-control" name="lastname" value="<?=$row["lastname"]?>" required>
                             </div>
                         </div>
 
                         <div class="form-group formField">
                           <div class="col-xs-12">
                             <label for="">ตำแหน่ง</label>
-                            <input type="text" class="form-control" name="position" value="<?=$row["position"]?>" >
+                            <input type="text" class="form-control" name="position" value="<?=$row["position"]?>" required>
                         </div>
 
                         <div class="form-group formField">
                             <div class="col-xs-12">
                               <label for="">จบจากมหาวิทยาลัยอะไร ?</label>
-                              <input type="text" class="form-control" name="university" value="<?=$row["university"]?>" >
+                              <input type="text" class="form-control" name="university" value="<?=$row["university"]?>" required>
                           </div>
 
                           <div class="form-group">
                               <div class="col-xs-12">
                                 <label for="">ความสนใจพิเศษ</label>
-                                <textarea class="form-control" name="specialist"  rows="10"><?=$row["specialist"]?></textarea>
+                                <textarea class="form-control" name="specialist"  rows="10" required><?=$row["specialist"]?></textarea>
                             </div>
 
                         </div>
