@@ -10,7 +10,7 @@
 && $imageFileType != "gif" ) {
     	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     	exit(1);
-    }
+    } 
 
     else {
     /*******************************ตรวจสอบว่า upload file สำเร็จหรือไม่********************************/
