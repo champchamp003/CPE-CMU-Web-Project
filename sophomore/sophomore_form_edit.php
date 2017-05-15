@@ -1,3 +1,23 @@
+<?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "phpbasic";
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    mysqli_set_charset($conn, "utf8");
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    
+  $sql = "SELECT * FROM sophomore where id='".$_GET["id"]."'";
+  $result = $conn->query($sql);
+  $row = $result->fetch_assoc()
+    
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,131 +84,78 @@
                   <div class="col-xs-offset-1 col-xs-10">
                 <div class="panel panel-default formPanel">
                           <div class="panel-heading bg-color-1 border-color-1">
-                            <h3 class="panel-title">นักศึกษาปีที่ 4</h3>
+                            <h3 class="panel-title">นักศึกษาปีที่ 2</h3>
                           </div>
                           <div class="panel-body">
-                                <form action="senior_add.php" method="POST" role="form" enctype="multipart/form-data">
+                                <form action="sophomore_edit.php?id=<?=$row["id"]?>" method="POST" role="form" enctype="multipart/form-data">
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">รหัสนักศึกษา</label>
-                                           <input type="text" class="form-control" name="student_id" placeholder="รหัสนักศึกษา" required>
+                                           <input type="text" class="form-control" name="student_id" value="<?=$row["student_id"]?>" required>
                                         </div>
                                       </div>
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">ชื่อ</label>
-                                           <input type="text" class="form-control" name="firstname" placeholder="ชื่อ" required>
+                                           <input type="text" class="form-control" name="firstname" value="<?=$row["firstname"]?>" required>
                                         </div>
                                       </div>
                                        <div class="form-group formField">
                                         <div class="col-xs-12">
                                               <label for="">นามสกุล</label>
-                                               <input type="text" class="form-control" name="lastname" placeholder="นามสกุล" required>
+                                               <input type="text" class="form-control" name="lastname" value="<?=$row["lastname"]?>" required>
                                         </div>
                                       </div>
                                       
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                               <label for="">ชื่อเล่น</label>
-                                               <input type="text" class="form-control" name="nickname" placeholder="ชื่อเล่น" required>
+                                               <input type="text" class="form-control" name="nickname" value="<?=$row["nickname"]?>" required>
                                         </div>
 
                                         </div>
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">จบจากโรงเรียน</label>
-                                           <input type="text" class="form-control" name="school" placeholder="จบจากโรงเรียน" required>
+                                           <input type="text" class="form-control" name="school" value="<?=$row["school"]?>" required>
                                         </div>
                                       </div>
                                       <div class="form-group formField">
                                         <div class="col-xs-12">
                                            <label for="">การเข้าศึษา</label>
-                                           <input type="text" class="form-control" name="entrance" placeholder="การเข้าศึษา" required>
+                                           <input type="text" class="form-control" name="entrance" value="<?=$row["entrance"]?>" required>
                                         </div>
                                       </div>
 
-                                        <div class="form-group">
-                                        <div class="col-xs-12">
-                                              <label for="">รูปภาพ</label>
-                                              <input type="file" name="img" id="img" required>
-                                            </div>
-
-                                        </div>
+                                      
                                       <div class="form-group formField">
                                             <div class="col-xs-12">
                                               <label></label>
-                                                <input type="submit" class="btn btn-primary btn-block bg-color-3 border-color-3" value="Submit">
+                                                <input type="submit" class="btn btn-primary btn-block bg-color-3 border-color-3" value="แก้ไขข้อมูล">
                                             </div>
                                       </div>
                                 </form>
+                                <form action="sophomore_img_edit.php?id=<?=$row["id"]?>" method="POST" role="form" enctype="multipart/form-data">
+                 <div class="form-group">
+                          <div class="col-xs-12">
+                            <label for=""><br>รูปภาพ</label>
+                            <p><img src="<?=$row["img"]?>" alt="" img-rounded img-responsive width=125></p>
+                            <input type="file" name="img" id="img">
+                        </div>
+
+                        <div class="form-group formField">
+                      <div class="col-xs-12">
+                         <label></label>
+                         <input type="submit" class="btn btn-primary btn-block bg-color-1 border-color-3" value="แก้ไขรูปภาพ">
+                     </div>
+
+             </form>
                    </div>
                 </div>
              </div>  
          </div>
      </div>
  
-</section><!--about us-->
-
-<section id="list" class="testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 center-title text-center">
-                <h3>List</h3>
-                <span class="center-line"></span>
-            </div>
-        </div><!--section title-->
-        <div class="row">
-            <?php
-
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "phpbasic";
-            $conn = new mysqli($servername, $username, $password,$dbname);
-            mysqli_set_charset($conn, "utf8");
-
-    // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            } 
-
-            $sql = "SELECT * FROM senior";
-            $result = $conn->query($sql);
-            ?>
-            <div class="col-xs-12">
-                <h3 class="color-1">จำนวนนักศึกษาปีที่ 4 รวมทั้งสิ้น <?=$result->num_rows?> คน</h3>
-                <div class="table-responsive">
-                  <table class="table table-curved">
-                    <thead>
-                      <tr>
-                        <th class="col-sm-2"><h4>Student ID</h4></th>
-                        <th class="col-sm-2"><h4>ชื่อ</h4></th>
-                        <th class="col-sm-2"><h4>นามสกุล</h4></th>
-                        <th class="col-sm-2"><h4>ชื่อเล่น</h4></th>
-                        <th class="col-sm-2"><h4>รูปภาพ</h4></th>
-                        <th class="col-sm-2"><h4>แก้ไข</h4></th>
-                        <th class="col-sm-2"><h4>ลบ</h4></th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <?php while($row = $result->fetch_assoc()): ?>
-                    <tr>
-                        <td><?=$row["student_id"]?></td>
-                        <td><?=$row["firstname"]?></td>
-                        <td><?=$row["lastname"]?></td>
-                        <td><?=$row["nickname"]?></td>
-                        <td><img src="<?=$row["img"]?>" width="48" >
-                        <td><a href=""><i class="fa fa-pencil-square-o"></td>
-                        <td><a href="senior_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></a></td>
-                        <td><a href="senior_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
-    </div>
-</div><?php $conn->close(); ?><!--img-service box-->
-</div>
-</div>  
 </section><!--about us-->
 
 <!-- Bootstrap js-->

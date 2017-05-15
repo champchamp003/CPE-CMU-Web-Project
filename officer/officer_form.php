@@ -160,6 +160,7 @@
                         <td><?=$row["position"]?></td>
                         <td><img src="<?=$row["img"]?>" width="48" >
                         <td><a href=""><i class="fa fa-pencil-square-o"></td>
+                        <td><a href="officer_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></a></td>
                         <td><a href="officer_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></td>
                     </tr>
                 <?php endwhile; ?>
