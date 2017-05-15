@@ -12,13 +12,12 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     
-  $sql = "SELECT * FROM junior here id='".$_GET["id"]."'";
+  $sql = "SELECT * FROM junior where id='".$_GET["id"]."'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc()
     
     
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
