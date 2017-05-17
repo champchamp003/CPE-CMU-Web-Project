@@ -28,7 +28,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "phpbasic";
+	$dbname = "group6";
 	$conn = new mysqli($servername, $username, $password,$dbname);
 	mysqli_set_charset($conn, "utf8");
 
@@ -38,8 +38,8 @@
 	} 
 	
 
-	$sql = "INSERT INTO junior (student_id,firstname,lastname,nickname,gender,age,school,entrance,img)
-            VALUES ('".$_POST["student_id"]."','".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["nickname"]."','".$_POST["gender"]."','".$_POST["age"]."','".$_POST["school"]."','".$_POST["entrance"]."','".$target_file."')";
+	$sql = "INSERT INTO junior (student_id,firstname,lastname,nickname,school,entrance,img)
+            VALUES ('".$_POST["student_id"]."','".$_POST["firstname"]."', '".$_POST["lastname"]."','".$_POST["nickname"]."','".$_POST["school"]."','".$_POST["entrance"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
 		header('Location:junior_form.php');

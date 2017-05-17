@@ -191,7 +191,7 @@ h1, h1, h3, h4, h5, h6 {
 .about-section {
   padding-top: 80px;
   padding-bottom: 50px;
-  background-image: url(Back.png);
+  background-color: #000000;
    }
 
 .img-service-box {
@@ -865,9 +865,36 @@ By ADAMSCHWARTZ
   }
 
   .fullscreen-block {
-  background-image: url(b.jpg);
+  background-image: url(bg.jpg) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   width: 100vw;
   height: 100vh;
+}
+
+  .stick-bottom {
+    bottom: 0;
+  }
+  .stick-left {
+    left: 0;
+  }
+
+  @media only all and (min-width: 768px)
+.black-ribbon {
+    width: auto;
+}
+
+.black-ribbon {
+    position: fixed;
+    z-index: 9999;
+    width: auto;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+* {
+    word-wrap: break-word;
 }

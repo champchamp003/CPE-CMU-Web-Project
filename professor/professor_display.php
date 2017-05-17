@@ -28,7 +28,8 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-         <body class="fullscreen-block">
+         <body background="bg.jpg">
+         <img src="../img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -42,8 +43,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="professor.php">Professor</a></li>                    
+                       <li><a href="Professor.php">Back to Professor</a></li>
+                        <li><a href="../index.html">Home</a></li>                     
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -55,7 +56,7 @@
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-                $dbname = "phpbasic";
+                $dbname = "group6";
                 $conn = new mysqli($servername, $username, $password,$dbname);
                 mysqli_set_charset($conn, "utf8");
 
@@ -74,16 +75,16 @@
     <section class="mainContent full-width clearfix">
       <div class="container">
             <div class="row">
-                  <div class="col-sm-4 col-xs-12">
+                  <div class="col-sm-3 col-xs-3 col-xs-offset-1">
                       <div class="profile-picture">
                         <img src="<?=$row["img"]?>" alt="img" class="img-rounded">  
                       </div>  
                   </div>
-                  <div class="col-sm-8 col-xs-12">                
-                        <table class="table table-curved">
+                  <div class="col-sm-12 col-xs-12">                
+                        <table class="table table-curved" class="col-sm-8 col-xs-12">
                           <thead>
                             <tr>
-                              <h3><?=$row["firstname"]?> &nbsp;&nbsp; <?=$row["lastname"]?></h3></th><hr color="#FFFFFF" size="5">
+                              <h2><?=$row["firstname"]?> &nbsp;&nbsp; <?=$row["lastname"]?></h2></th>
                               <th class="col-sm-1"><font color="#B0E0E6">ตำแหน่ง</font></div></th>
                               <div class="professionDetails"></div></th>
                               <th class="col-sm-2"><font color="#B0E0E6">มหาวิทยาลัย</font></div></th>
@@ -92,12 +93,13 @@
                           </thead>
                           <tbody>
                           <tr>
-                              <td><?=$row["position"]?></td>
-                              <td><?=$row["university"]?></td>
-                              <td><?=$row["specialist"]?></td>
+                              <td><font color="#FFFFF0" size="3"><?=$row["position"]?></td></font>
+                              <td><font color="#FFFFF0" size="3"><?=$row["university"]?></td></font>
+                              <td><font color="#FFFFF0" size="3"><?=$row["specialist"]?></td></font>
                           </tr>
                         </tbody>
                         </table>
+                   <br><br><br><br><br><br><br><br>
                   </div>
             </div>
       </div>

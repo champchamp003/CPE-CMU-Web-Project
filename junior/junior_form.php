@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CPE CMU</title>
+    <title>Junior</title>
     <!-- Bootstrap -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,17 +34,11 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a href="../index.html"><img src="../img/logo.png" alt = "img" width = "140"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../admin/index.html">Admin</a></li>
                         <li><a href="#add">Add</a></li>
                         <li><a href="#list">List</a></li>
                     </ul>
@@ -142,7 +136,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "phpbasic";
+            $dbname = "group6";
             $conn = new mysqli($servername, $username, $password,$dbname);
             mysqli_set_charset($conn, "utf8");
 
@@ -178,7 +172,7 @@
                         <td><?=$row["nickname"]?></td>
                         <td><img src="<?=$row["img"]?>" width="48" >
                         <td><a href="junior_form_edit.php?id=<?=$row["id"]?>"><i class="fa fa-pencil-square-o"></td>
-                        <td><a href="junior_delete.php"><i class="fa fa-times"></td>
+                        <td><a href="junior_delete.php?id=<?=$row["id"]?>"><i class="fa fa-times"></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>

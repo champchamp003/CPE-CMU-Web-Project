@@ -28,8 +28,10 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
     </head>
     <body data-spy="scroll">
+    <img src="img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
         <!-- Static navbar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -47,14 +49,17 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#people">People</a></li>
                         <li><a href="#student">Student</a></li>
+                        <li><a href="#work">Accomplishment</a></li>
                         <li><a href="#map">Map</a></li>
+                        <li><a href="login.php">Admin</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
 
 
-        <section id="home">
+
+       <section id="home">
             <div class="home-inner">
                 <div class="container">
                     <div class="row">
@@ -65,7 +70,9 @@
                     </div>
                 </div>
             </div>
-        </section><!--home intro section-->
+        </section><!-- home intro section-->
+
+
 
 
         <section id="people" class="about-section">
@@ -82,14 +89,14 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-md-offset-3 text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/img-6.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="professor/professor.php"><img src="img/resto/professor.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="Professor/Professor.php">Professor</a></h3>
                         </div>
                     </div><!--img-service box-->
                     <div class="col-md-3 col-sm-6  text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/img-7.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="officer/officer.php"><img src="img/resto/office.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="officer/officer.php">Officer</a></h3>
                         </div>
@@ -109,28 +116,28 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/1st.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="freshmen/freshmen.php"><img src="img/resto/1st.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="Freshmen/freshmen.php">Freshmen</a></h3>
                         </div>
                     </div><!--img-service box-->
                     <div class="col-md-3 col-sm-6 text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/2nd.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="sophomore/sophomore.php"><img src="img/resto/2nd.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="sophomore/sophomore.php">Sophomores</a></h3>
                         </div>
                     </div><!--img-service box-->
                     <div class="col-md-3 col-sm-6 text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/3rd.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="Junior/Junior.php"><img src="img/resto/3rd.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="Junior/Junior.php">Juniors</a></h3>
                         </div>
                     </div><!--img-service box-->
                     <div class="col-md-3 col-sm-6 text-center">
                         <div class="img-service-box">
-                            <img src="img/resto/4th.jpg" width="200" height="200" class="img-circle " alt="">
+                            <a href="senior/senior.php"><img src="img/resto/4th.jpg" width="200" height="200" class="img-circle " alt=""></a>
                             <span class="center-line"></span>
                             <h3><a href="senior/senior.php">Seniors</a></h3>
                         </div>
@@ -139,7 +146,27 @@
             </div>  
         </section><!--about us-->
 
-        <section id="map" class="about-section">
+        <section id="work" class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 center-title text-center">
+                        <h3>Achievement</h3>
+                        <span class="center-line"></span>
+                    </div>
+                </div><!--section title-->
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 center-title text-center">
+                        <div class="img-service-box">
+                            <a href="work/work.php"><img src="img/resto/goal.jpg" width="200" height="200" class="img-circle " alt="">
+                            <span class="center-line"></span>
+                            <h3><a href="work/work.php">Accomplishment</a></h3>
+                        </div>
+                    </div><!--img-service box-->
+                </div>
+            </div>  
+        </section>
+
+        <section id="map" class="testimonials">
             <div class="container">
                 <div class="row">
                     <div class="center-title text-center">
@@ -167,8 +194,6 @@
             <span>
             <section id="home"><div class="home-inner"><h3>Cpe Chiang Mai University</h3></div> </section></span>
         </footer>
-        
-        
 
 
 

@@ -30,6 +30,7 @@
         <![endif]-->
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
+        <img src="../img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
@@ -43,7 +44,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="#professor">Professor</a></li>                    </ul>
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
@@ -53,7 +54,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "phpbasic";
+            $dbname = "group6";
             $conn = new mysqli($servername, $username, $password,$dbname);
             mysqli_set_charset($conn, "utf8");
 

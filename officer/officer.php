@@ -28,7 +28,8 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+<body>
+<img src="../img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -43,7 +44,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="#officer">Oficcer</a></li>                    </ul>
+                   </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
@@ -53,7 +54,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "phpbasic";
+            $dbname = "group6";
             $conn = new mysqli($servername, $username, $password,$dbname);
             mysqli_set_charset($conn, "utf8");
 

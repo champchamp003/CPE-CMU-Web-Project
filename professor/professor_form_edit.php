@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "phpbasic";
+    $dbname = "group6";
     $conn = new mysqli($servername, $username, $password,$dbname);
     mysqli_set_charset($conn, "utf8");
 
@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CPE CMU</title>
+    <title>Professor</title>
     <!-- Bootstrap -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -64,7 +64,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../admin/index.html">Admin</a></li>
+                        <li><a href="professor_form.php">Form</a></li>
                         <li><a href="#edit">Edit</a></li>
                         <li><a href="#list">List</a></li>
                     </ul>

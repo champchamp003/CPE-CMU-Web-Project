@@ -28,7 +28,8 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-         <body class="fullscreen-block">
+        <body background="bg.jpg">
+        <img src="../img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -42,8 +43,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="Junior.php">Junior</a></li>                    
+                        <li><a href="Junior.php">Back to Junior</a></li>
+                        <li><a href="../index.html">Home</a></li>                    
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -54,7 +55,7 @@
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "phpbasic";
+  $dbname = "group6";
   $conn = new mysqli($servername, $username, $password,$dbname);
   mysqli_set_charset($conn, "utf8");
 
@@ -75,7 +76,7 @@
       <div class="container">
             <div class="row">
                   <div class="col-sm-4 col-xs-12">
-                      <div class="col-sm-4 col-xs-12">
+                      <div class="col-sm-3 col-xs-3 col-xs-offset-1">
                         <div class="profile-picture">
                         <img src="<?=$row["img"]?>" alt="img" class="img-rounded">  
                       </div> 
@@ -83,15 +84,16 @@
                   </div>
                   <div class="col-sm-8 col-xs-12">
                     <div class="freshmenInfo">
-                          <h3><?=$row["firstname"]?>&nbsp;&nbsp; <?=$row["lastname"]?></h3><hr color="#FFFFFF" size="5">
+                          <h2><?=$row["firstname"]?>&nbsp;&nbsp; <?=$row["lastname"]?></h2>
                           <div><font color=#D3D3D3>รหัสนักศึกษา</font></div>
-                          <div class="professionDetails"><?=$row["student_id"]?></div><br>
+                          <div class="professionDetails"><font color="#B0E0E6"><?=$row["student_id"]?></font></div><br>
                           <div><font color=#D3D3D3>ชื่อเล่น</font></div>
-                          <div class="professionDetails"><?=$row["nickname"]?></div><br>
+                          <div class="professionDetails"><font color="#B0E0E6"><?=$row["nickname"]?></font></div><br>
                           <div><font color=#D3D3D3>โรงเรียน</font></div>
-                          <div class="professionDetails"><?=$row["school"]?></div><br>
+                          <div class="professionDetails"><font color="#B0E0E6"><?=$row["school"]?></font></div><br>
                           <div><font color=#D3D3D3>เข้าศึกษา</font></div>
-                          <div class="professionDetails"><?=$row["entrance"]?></div><br>
+                          <div class="professionDetails"><font color="#B0E0E6"><?=$row["entrance"]?></font></div><br>
+                          <br><br><br><br><br><br><br><br>
                     </div>
                   </div>
             </div>

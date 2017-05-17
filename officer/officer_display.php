@@ -29,7 +29,8 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <body class="fullscreen-block">
+        <body background="bg.jpg">
+        <img src="../img/black_ribbon_bottom_left.png" class="black-ribbon stick-bottom stick-left">
              <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -43,8 +44,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav scroll-to navbar-right">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="professor.php">Officer</a></li>                    
+                        <li><a href="Officer.php">Back to Officer</a></li>
+                        <li><a href="../index.html">Home</a></li>                    
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -54,7 +55,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "phpbasic";
+	$dbname = "group6";
 	$conn = new mysqli($servername, $username, $password,$dbname);
 	mysqli_set_charset($conn, "utf8");
 
@@ -74,16 +75,16 @@
     <section class="mainContent full-width clearfix">
       <div class="container">
             <div class="row">
-                  <div class="col-sm-6 col-xs-12 col-md-12 col-lg-12">
+                  <div class="col-sm-3 col-xs-3 col-xs-offset-1">
                     <div class="profile-picture">
                         <img src="<?=$row["img"]?>" alt="img" class="img-rounded">  
                     </div>
                   </div>
-                  <div class="col-sm-8 col-xs-12">
-                    <div class="teachersInfo"><br><br>
-                          <h3><?=$row["firstname"]?> <?=$row["lastname"]?></h3><hr color="#FFFFFF" size="5" align="left" width="80%">
-                          <div class="teachersProfession bg-color-3"><font color="#B0E0E6">ตำแหน่ง</font></div><br>
-                          <div class="professionDetails"><?=$row["position"]?></div>
+                  <div class="col-sm-12 col-xs-12">
+                    <div class="teachersInfo"><br>
+                          <h2><?=$row["firstname"]?> <?=$row["lastname"]?></h2><br>
+                          <div class="teachersProfession bg-color-3"><font color="#B0E0E6">ตำแหน่ง</font></div><hr><br>
+                          <div class="professionDetails"><font color="#FFFFF0" size="3"><?=$row["position"]?></font><br><br><br><br><br><br><br><br><br><br><br><br></div>
                     </div>
                   </div>
             </div>
